@@ -1,63 +1,23 @@
-import './App.css'
-import './util.css'
+import { Container, Paper, Stack, TextField, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom"
 
-function Login() {
+export default function Login() {
+  const navigate = useNavigate();
 
   return (
-    <> 
-      <div className="limiter">
-      <div className="container-login100">
-        <div className="wrap-login100">
-          <form className="login100-form validate-form">
-            <span className="login100-form-title p-b-26">
-              Welcome
-            </span>
-            <span className="login100-form-title p-b-48">
-              <i className="zmdi zmdi-font"></i>
-            </span>
+    <Container maxWidth="xl" sx={{ position: "relative" }} >
+      <Paper elevation={3} sx={{ p: "20px", width: "400px", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, 50%)"  }}  >
+        <Stack direction="column" gap={2} >
+          <Typography variant="h4" align="center">Login</Typography>
 
-            <div className="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-              <input className="input100" type="text" name="email"/>
-              <span className="focus-input100" data-placeholder="Email"></span>
-            </div>
+          <TextField variant="outlined" label="username" type="text" />
+          <TextField variant="outlined" label="password" type="password" />
 
-            <div className="wrap-input100 validate-input" data-validate="Enter password">
-              <span className="btn-show-pass">
-                <i className="zmdi zmdi-eye"></i>
-              </span>
-              <input className="input100" type="password" name="pass"/>
-              <span className="focus-input100" data-placeholder="Password"></span>
-            </div>
+          <Button variant="contained" color="success" >login</Button>
 
-            <div className="container-login100-form-btn">
-              <div className="wrap-login100-form-btn">
-                <div className="login100-form-bgbtn"></div>
-                <button className="login100-form-btn">
-                  Login
-                </button>
-              </div>
-            </div>
-
-            <div className="text-center p-t-115">
-              <span className="txt1">
-                Don’t have an account?
-              </span>
-
-              <a className="txt2" href="#">
-                Sign Up
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-
-    <div id="dropDownSelect1"></div>
-    
-    
-    </>
-  )
+          <Button color="inherit" onClick={() => navigate("/register")}  >register</Button>
+        </Stack>
+      </Paper>
+    </Container>
+  );
 }
-
-export default Login
