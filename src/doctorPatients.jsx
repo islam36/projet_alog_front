@@ -83,7 +83,7 @@ export default function DoctorPatients() {
       <Grid container spacing={2} sx={{ mt: "100px" }}>
         {patients.map((patient, index) => (
           <Grid key={index} item xs={12} sm={4}>
-            <Paper sx={{ p: "10px" }}>
+            <Paper sx={{ p: "10px" }} elevation={3} >
               <Typography
                 variant="h6"
                 sx={{ mb: "10px", textTransform: "capitalize" }}

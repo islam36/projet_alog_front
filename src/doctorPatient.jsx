@@ -96,7 +96,7 @@ export default function DoctorPatient() {
         <Stack direction="row" sx={{ mb: "20px " }}>
           <Typography variant="h4">Medical records</Typography>
 
-          <Fab color="primary" variant="contained" sx={{ ml: "auto" }} > 
+          <Fab color="primary" variant="contained" sx={{ ml: "auto" }} onClick={() => setOpen(true)} > 
             <Add />
           </Fab>
         </Stack>

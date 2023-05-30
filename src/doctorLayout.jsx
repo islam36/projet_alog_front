@@ -55,7 +55,7 @@ function DoctorLayout({ children, title }) {
               <ListItemIcon>
                 <Logout />
               </ListItemIcon>
-              <ListItemText primary="profile" />
+              <ListItemText primary="log out" />
             </ListItemButton>
           </ListItem>
         </List>
