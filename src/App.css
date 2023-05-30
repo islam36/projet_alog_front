@@ -36,6 +36,27 @@
       padding: 0px; 
       box-sizing: border-box;
   }
+
+
+  .cardDocs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .cardDocs div{
+    width: 70%;
+    height: auto;
+    border: solid 1px rgb(164, 164, 164);
+    border-radius: 8px;
+    box-shadow: #555555;
+    padding: 20px;
+  }
+
+  .cardDocs div .contentDoc{
+    padding: 2%;
+  }
   
   body, html {
       height: 100%;
